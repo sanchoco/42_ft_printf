@@ -1,4 +1,4 @@
-# 42_ft_printf
+# ft_printf
 기존의 printf 함수와 똑같이 동작하도록 구현
 
 ## 프로젝트 문서
