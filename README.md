@@ -1,10 +1,6 @@
 # ft_printf
 기존의 printf 함수와 똑같이 동작하도록 구현
 
-## 프로젝트 문서
-
-[ft_printf.pdf](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e118b1c-5d53-40f9-aa2e-b043ae054aad/ft_printf.pdf)
-
 ## 주요 내용
 
 라이브러리 이름: libftprintf.a
@@ -70,10 +66,6 @@ man 3 printf / man 3 stdarg
 - 서식 문자의 종류에 따라 변수형에 따른 가변 인자를 불러온 후 이 값을 문자열로 변환.
 - 이 문자열을 서식문자마다 이미 파싱된 값을 다르게 활용하여 문자열을 가공하고 출력함.
 - 이 과정을 반복하며 출력한 크기를 누적하고  문자열의 끝인 '\0'이 나오면 return값을 반환함.
-
-## 소스 코드
-
-- [https://github.com/sanchoco/42_ft_printf](https://github.com/sanchoco/42_ft_printf)
 
 ## 테스트 프로그램
 
