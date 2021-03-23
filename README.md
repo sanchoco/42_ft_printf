@@ -2,7 +2,7 @@
 기존의 printf 함수와 똑같이 동작하도록 구현
 
 ## 구현 내용
-- 저수준 입출력 함수(read, write)와 메모리(malloc, free)만 사용
+- 저수준 입출력 함수(read, write)와 메모리 함수(malloc, free)만 사용
 -  "-0.\*" 플래그의 조합과 "cspdiuxX%" 서식 문자의 조합 출력
 -  man 3 printf 를 참고하여 구현
 
