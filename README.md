@@ -1,37 +1,10 @@
-# ft_printf
+# C_printf
 기존의 printf 함수와 똑같이 동작하도록 구현
 
-## 주요 내용
-
-라이브러리 이름: libftprintf.a
-
-있어야 할 파일: ✽*.c,* ✽/✽.c, ✽.h, ✽/✽.h
-
-Makefile의 규칙: all, clean, fclean, re, bonus
-
-허용된 함수: malloc, free, write, va_start, va_arg, va_copy, va_end
-
-내용: ft_printf 함수를 포함하는 라이브러리를 작성하십시오.
-
-## 과제의 세부 조건
-
-You have to recode the libc’s printf function
-
-☞ 라이브러리의 실제 함수를 다시 구성해야 함
-
-It must not do the buffer management like the real printf
-
-☞ 버퍼 관리는 하지 말아야 함
-
-It will manage the following conversions: cspdiuxX%
-
-☞ 다음 문자를 처리해야함 : cspdiuxX%
-
-It will manage any combination of the following flags: ’-0.*’ and minimum field
-
-☞ '-0.*' 플래그의 조합을 관리해야 함
-
-man 3 printf / man 3 stdarg
+## 구현 내용
+- 저수준 입출력 함수(read, write)와 메모리(malloc, free)만 사용
+-  "-0.\*" 플래그의 조합과 "cspdiuxX%" 서식 문자의 조합 출력
+-  man 3 printf 를 참고하여 구현
 
 ## 해석
 
@@ -46,7 +19,7 @@ man 3 printf / man 3 stdarg
 - 서식 문자에 따라 활용하는 플래그와 옵션이 달라짐.
 - (*)은 인자에서 정수형 숫자가 대신 할 수 있음.
 
-    ex) printf("*.*s", 6, 3, "abcdefg"); ⇒ "   abc"
+    ex) printf("\*.\*s", 6, 3, "abcdefg"); ⇒ "   abc"
 
 - (-)는 왼쪽 정렬
 - (0)는 지정한 자리수만큼 0으로 채움
@@ -66,8 +39,3 @@ man 3 printf / man 3 stdarg
 - 서식 문자의 종류에 따라 변수형에 따른 가변 인자를 불러온 후 이 값을 문자열로 변환.
 - 이 문자열을 서식문자마다 이미 파싱된 값을 다르게 활용하여 문자열을 가공하고 출력함.
 - 이 과정을 반복하며 출력한 크기를 누적하고  문자열의 끝인 '\0'이 나오면 return값을 반환함.
-
-## 테스트 프로그램
-
-- [https://github.com/Mazoise/42TESTERS-PRINTF](https://github.com/Mazoise/42TESTERS-PRINTF)
-- [https://github.com/cclaude42/PFT_2019](https://github.com/cclaude42/PFT_2019)
